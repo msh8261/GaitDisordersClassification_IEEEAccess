@@ -1,0 +1,38 @@
+# pylint: disable = c0411, c0301, c0103, c0303
+
+params = dict(
+    # configure the parameters
+    dir_patients="C:/Users/mohsen/Desktop/Postdoc_Upa/Datasets/GaitAnalysis/exported_images_cleaned/",
+    dir_dist="C:/Users/mohsen/Desktop/Postdoc_Upa/Datasets/GaitAnalysis/tracked_features_100",
+    path_csv_file="C:/Users/mohsen/Desktop/Postdoc_Upa/Datasets/GaitAnalysis/ORL_skeletons_lookup - labels.csv",
+    keypoints=[
+        "nose",
+        "left_eye",
+        "right_eye",
+        "left_ear",
+        "right_ear",
+        "left_shoulder",
+        "right_shoulder",
+        "left_elbow",
+        "right_elbow",
+        "left_wrist",
+        "right_wrist",
+        "left_hip",
+        "right_hip",
+        "left_knee",
+        "right_knee",
+        "left_ankle",
+        "right_ankle",
+    ],
+    label_file_name_="Notice.xml",
+    WINDOW_SIZE=100,
+    features_size=70,
+    image_need_crop=True,
+    scale_w=0.5,
+    scale_h=1,
+    ZERO_PADDING=True,
+    person_thresh=0.9,
+    keypoint_threshold=0,
+    num_keypoints=17,
+    all_possible_features=True,
+)

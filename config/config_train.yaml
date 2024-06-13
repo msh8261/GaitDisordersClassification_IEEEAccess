@@ -1,0 +1,40 @@
+
+model_params:  
+
+  bfs_methods: ['ANOVA', 'chi2', 'kruskal', 'cmim', 'disr', 'mifs', 
+                              'ReliefF', 'SURF', 'SURFstar', 'MultiSURF'] 
+
+  models_name: ["gru", "lstm", "mlp"] 
+
+  modes: ['detection', 'tracking']
+
+input_data_params:
+  inputs_best_feat_size: [60, 50, 40, 30, 20, 10]
+  inputs_manual_feat_size: [70, 34, 36, 58, 62]
+  sequences: 300
+  num_class: 3
+  # 0-6 -->> 0 means no augmentation, 5 is best
+  num_augmentation: 5
+
+
+train_params:
+  batch_size: 16 
+  epochs: 3 
+
+  ## 'relu', 'sigmoid', 'tanh', 'selu','elu', 
+  ## 'LeakyReLU','rrelu'                          
+  acf_indx: 'LeakyReLU' 
+  ## 'Adam', 'SGD', 'RMSprop', 'Adadelta', 'Adagrad',  
+  ## 'Adamax','Adamw', 'AdaBound'  
+  opt_indx: 'Adamw'
+  last_layer:  64
+  dropout: 0.1
+  bottleneck: 70
+
+  learning_rate: 2e-2
+  weight_decay: 1e-5
+  lr_decay: 0.1 
+
+  n_folds: 5 
+
+random_state_list: [21] 
